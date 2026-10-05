@@ -106,7 +106,7 @@ function AdminNavbar({ onMenuClick }) {
           LEFT SIDE
       ========================================== */}
 
-      <div className="flex items-center gap-3">
+      <div className="flex gap-3">
 
         {/* MOBILE MENU */}
 
@@ -120,8 +120,8 @@ function AdminNavbar({ onMenuClick }) {
 
         {/* BRAND */}
 
-        <div>
-          <h1 className="font-serif text-xl md:text-2xl font-semibold tracking-wide text-[#F8F1E5]">
+        <div className="flex items-center gap-2">
+          <h1 className="font-serif text-xl md:text-2xl flex items-center font-semibold tracking-wide text-[#F8F1E5]">
             Olivia Grand
           </h1>
 
