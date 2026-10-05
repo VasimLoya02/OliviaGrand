@@ -108,39 +108,40 @@ export function CartProvider({ children }) {
                     "Please login first to add food to your cart."
                 );
 
-                navigate("/login");
-
+                 navigate("/login");
                 return;
 
             }
 
+            else {
 
-            const response = await api.post(
-                "/cart",
-                {
-                    menuItem: item._id,
+                const response = await api.post(
+                    "/cart",
+                    {
+                        menuItem: item._id,
 
-                    name: item.name,
+                        name: item.name,
 
-                    price: Number(item.price),
+                        price: Number(item.price),
 
-                    image:
-                        item.images?.[0] ||
-                        item.image ||
-                        "",
+                        image:
+                            item.images?.[0] ||
+                            item.image ||
+                            "",
 
-                    quantity: 1,
-                }
-            );
-
-
-            const cart =
-                response.data.data;
+                        quantity: 1,
+                    }
+                );
 
 
-            setCartItems(
-                cart.items || []
-            );
+                const cart =
+                    response.data.data;
+
+
+                setCartItems(
+                    cart.items || []
+                );
+            }
 
 
         } catch (error) {

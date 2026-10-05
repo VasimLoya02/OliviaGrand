@@ -171,7 +171,7 @@ function Menu() {
 
     addToCart(item);
 
-    alert(`${item.name} added to cart`);
+    // alert(`${item.name} added to cart`);
 
   };
 
